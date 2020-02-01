@@ -2,7 +2,7 @@ FROM docker.io/fedora:31
 
 MAINTAINER Andrew Cole <andrew.cole@illallangi.com>
 
-RUN yum -y install beets beets-plugins beets-doc which; \
+RUN yum -y install beets beets-plugins beets-doc findutils sqlite which; \
     yum -y update; \
     yum -y clean all
 
