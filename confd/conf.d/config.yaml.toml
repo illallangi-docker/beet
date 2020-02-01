@@ -1,0 +1,6 @@
+[template]
+src  = "config.yaml.tmpl"
+dest = "/config/config.yaml"
+keys = [
+    "/beet/directory"
+]

@@ -1,0 +1,23 @@
+directory: {{getv "/beet/directory"}}
+plugins: web fetchart lyrics lastgenre embedart
+asciify_paths: yes
+art_filename: folder
+per_disc_numbering: yes
+paths:
+  default: ${genre} - ${albumartist_sort} - ${year} - ${album}/d${disc}t${track} - ${artist} - ${title}
+  comp: Compilation - ${year} - ${album}/d${disc}t${track}. ${artist} - ${title}
+web:
+  host: 0.0.0.0
+  port: 80
+  reverse_proxy: true
+import:
+  write: yes
+  copy: yes
+  resume: yes
+  incremental: yes
+lastgenre:
+  auto: yes
+  canonical: yes
+  source: artist
+embedart:
+  remove_art_file: yes
