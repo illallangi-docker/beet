@@ -3,6 +3,7 @@
 export BEET_CONFIG=${BEET_CONFIG:-/config/config.yaml}
 export BEET_DIRECTORY=${BEET_DIRECTORY:-/music}
 export BEET_LIBRARY=${BEET_LIBRARY:-/library/library.db}
+export BEET_IMPORT_LOG=${BEET_IMPORT_LOG:-/library/import.log}
 export UMASK_SET=${UMASK_SET:-022}
 
 UMASK=$(which umask)

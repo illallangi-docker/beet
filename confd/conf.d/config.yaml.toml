@@ -2,5 +2,6 @@
 src  = "config.yaml.tmpl"
 dest = "/config/config.yaml"
 keys = [
-    "/beet/directory"
+    "/beet/directory",
+    "/beet/import/log"
 ]
