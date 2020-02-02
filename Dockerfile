@@ -2,9 +2,20 @@ FROM docker.io/fedora:31
 
 MAINTAINER Andrew Cole <andrew.cole@illallangi.com>
 
-RUN yum -y install beets beets-plugins beets-doc findutils sqlite which; \
-    yum -y update; \
-    yum -y clean all
+RUN dnf -y install \
+      findutils \
+      git \
+      python3 \
+      python3-beautifulsoup4 \
+      python3-flask \
+      python3-pylast \
+      python3-requests \
+      sqlite \
+      which; \
+    dnf -y update; \
+    pip install -e git+https://github.com/beetbox/beets.git#egg=beets; \
+    dnf -y remove git; \
+    dnf -y clean all
 
 COPY contrib/confd-0.16.0-linux-amd64 /usr/local/bin/confd
 COPY contrib/dumb-init_1.2.2_amd64 /usr/local/bin/dumb-init
